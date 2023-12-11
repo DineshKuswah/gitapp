@@ -20,4 +20,4 @@ jobs:
       - name: Check and Print GitHubCLI Version
         shell: bash
         run: |
-          echo "GitHub CLI IS Installed and Version is: $(gh --version)"
+          echo "GitHub CLI IS Installed and Version is: $(gh --version | awk '{print $3,$4)' "
